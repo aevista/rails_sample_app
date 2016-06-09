@@ -7,7 +7,7 @@ Rails.application.routes.draw do
 
   get '/about' => 'static_pages#about'
 
-  get '*path' => redirect('/')
+  #get '*path' => redirect('/')
 
  
   # The priority is based upon order of creation: first created -> highest priority.
