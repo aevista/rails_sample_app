@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
 
 
+  get 'sessions/new'
+
   get 'users/new'
 
   root 'static_pages#home'
@@ -16,6 +18,12 @@ Rails.application.routes.draw do
   post '/signup' => 'users#create'
 
   resources :users
+
+  get '/login' => 'sessions#new'
+
+  post '/login' => 'sessions#create'
+
+  delete '/logout' => 'sessions#destroy'
 
   #get '*path' => redirect('/')
 
